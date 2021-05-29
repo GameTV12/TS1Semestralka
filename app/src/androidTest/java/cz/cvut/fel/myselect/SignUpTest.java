@@ -16,18 +16,22 @@ import org.junit.runner.RunWith;
 public class SignUpTest {
     @Test
     public void signUpInvalidNickname() {
+        // ARRANGE
         ActivityScenario.launch(AuthActivity.class);
         Espresso.onView(ViewMatchers.withId(R.id.txtSignUp)).perform(ViewActions.click());
         Espresso.onView(ViewMatchers.withId(R.id.inputLoginText_SignUpPage)).perform(ViewActions.typeText(""));
         Espresso.onView(ViewMatchers.withId(R.id.inputLoginText_SignUpPage)).perform(ViewActions.closeSoftKeyboard());
 
+        // ACT
         Espresso.onView(ViewMatchers.withId(R.id.btnForLogin_SignUpPage)).perform(ViewActions.click());
 
+        // ASSERT
         Espresso.onView(ViewMatchers.withId(R.id.inputLogin_SignUpPage)).check(ViewAssertions.matches(TextInputLayoutMatchers.hasError()));
     }
 
     @Test
     public void signUpPasswordMismatch() {
+        // ARRANGE
         ActivityScenario.launch(AuthActivity.class);
         Espresso.onView(ViewMatchers.withId(R.id.txtSignUp)).perform(ViewActions.click());
         Espresso.onView(ViewMatchers.withId(R.id.inputLoginText_SignUpPage)).perform(ViewActions.typeText("asdasdasdasdasd"));
@@ -38,8 +42,10 @@ public class SignUpTest {
         Espresso.onView(ViewMatchers.withId(R.id.inputPasswordRepeatText_SignUpPage)).perform(ViewActions.typeText("123457__"));
         Espresso.onView(ViewMatchers.withId(R.id.inputPasswordRepeatText_SignUpPage)).perform(ViewActions.closeSoftKeyboard());
 
+        // ACT
         Espresso.onView(ViewMatchers.withId(R.id.btnForLogin_SignUpPage)).perform(ViewActions.click());
 
+        // ASSERT
         Espresso.onView(ViewMatchers.withId(R.id.inputRepeatPass_SignUpPage)).check(ViewAssertions.matches(TextInputLayoutMatchers.hasError()));
     }
 }

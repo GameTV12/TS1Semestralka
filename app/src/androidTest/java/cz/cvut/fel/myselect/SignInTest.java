@@ -20,51 +20,63 @@ public class SignInTest {
     @Test
     public void signInSucceeded() {
         ActivityScenario.launch(AuthActivity.class);
+        // ARRANGE
         Espresso.onView(ViewMatchers.withId(R.id.txtEmailSignIn)).perform(ViewActions.typeText("family@gmail.com"));
         Espresso.onView(ViewMatchers.withId(R.id.txtLayoutPasswordSignIn)).perform(ViewActions.typeText("123456"));
         Espresso.onView(ViewMatchers.withId(R.id.txtLayoutPasswordSignIn)).perform(ViewActions.closeSoftKeyboard());
 
+        // ACT
         Intents.init();
         Espresso.onView(ViewMatchers.withId(R.id.btnForLogin_LoginPage)).perform(ViewActions.click());
 
+        // ASSERT
         Intents.intended(IntentMatchers.hasComponent(MainActivity.class.getName()));
         Intents.release();
     }
 
     @Test
     public void signInFailed() {
+        // ARRANGE
         ActivityScenario.launch(AuthActivity.class);
         Espresso.onView(ViewMatchers.withId(R.id.txtEmailSignIn)).perform(ViewActions.typeText("family@gmail.com"));
         Espresso.onView(ViewMatchers.withId(R.id.txtLayoutPasswordSignIn)).perform(ViewActions.typeText("invalid_password113337"));
         Espresso.onView(ViewMatchers.withId(R.id.txtLayoutPasswordSignIn)).perform(ViewActions.closeSoftKeyboard());
 
+        // ACT
         Espresso.onView(ViewMatchers.withId(R.id.btnForLogin_LoginPage)).perform(ViewActions.click());
 
+        // ASSERT
         Espresso.onView(ViewMatchers.withId(R.id.inputLogin_LoginPage)).check(ViewAssertions.matches(isDisplayed()));
     }
 
 
     @Test
     public void signInInvalidEmail() {
+        // ARRANGE
         ActivityScenario.launch(AuthActivity.class);
         Espresso.onView(ViewMatchers.withId(R.id.txtEmailSignIn)).perform(ViewActions.typeText(""));
         Espresso.onView(ViewMatchers.withId(R.id.txtLayoutPasswordSignIn)).perform(ViewActions.typeText("123456"));
         Espresso.onView(ViewMatchers.withId(R.id.txtLayoutPasswordSignIn)).perform(ViewActions.closeSoftKeyboard());
 
+        // ACT
         Espresso.onView(ViewMatchers.withId(R.id.btnForLogin_LoginPage)).perform(ViewActions.click());
 
+        // ASSERT
         Espresso.onView(ViewMatchers.withId(R.id.inputLogin_LoginPage)).check(ViewAssertions.matches(TextInputLayoutMatchers.hasError()));
     }
 
     @Test
     public void signInInvalidPassword() {
+        // ARRANGE
         ActivityScenario.launch(AuthActivity.class);
         Espresso.onView(ViewMatchers.withId(R.id.txtEmailSignIn)).perform(ViewActions.typeText("family@gmail.com"));
         Espresso.onView(ViewMatchers.withId(R.id.txtLayoutPasswordSignIn)).perform(ViewActions.typeText(""));
         Espresso.onView(ViewMatchers.withId(R.id.txtLayoutPasswordSignIn)).perform(ViewActions.closeSoftKeyboard());
 
+        // ACT
         Espresso.onView(ViewMatchers.withId(R.id.btnForLogin_LoginPage)).perform(ViewActions.click());
 
+        // ASSERT
         Espresso.onView(ViewMatchers.withId(R.id.inputPass_LoginPage)).check(ViewAssertions.matches(TextInputLayoutMatchers.hasError()));
     }
 }

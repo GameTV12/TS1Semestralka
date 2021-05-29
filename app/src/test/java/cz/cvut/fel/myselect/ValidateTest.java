@@ -55,8 +55,10 @@ class ValidateTest {
         System.out.println("Test for validateTitle for " + title);
         // ARRANGE
         PostValidator validator = PostValidator.Default;
+
         // ACT
         boolean result = validator.validateTitle(title);
+
         // ASSERT
         Assertions.assertEquals(result, expected);
     }
@@ -67,8 +69,10 @@ class ValidateTest {
         System.out.println("Test for validateTextPost for " + text);
         // ARRANGE
         PostValidator validator = PostValidator.Default;
+
         // ACT
         boolean result = validator.validateTextPost(text);
+
         // ASSERT
         Assertions.assertEquals(result, expected);
     }
