@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My select</string>
+    <string name="username">Nickname</string>
+    <string name="password">Heslo</string>
+    <string name="login">Login</string>
+    <string name="login_btn">Login</string>
+    <string name="repeat_password">Opakovat heslo</string>
+    <string name="email">Email</string>
+    <string name="login_here">Už máte účet? Přihlásit se!</string>
+    <string name="text_for_new_user">Vytvořit nový účet</string>
+    <string name="change_language">Jazyk</string>
+    <string name="write_post">Napsat post</string>
+    <string name="logout_button">Odhlášení</string>
+    <string name="go_home">Hlavní</string>
+    <string name="sign_up_title">Přihlášení</string>
+    <string name="sign_up_btn">Přihlásit se</string>
+    <string name="select_language">Podporuje jazyky:</string>
+    <string name="your_language">Aplikace podporuje tento jazyk</string>
+    <string-array name="list_language">
+        <item>Angličtina</item>
+        <item>Čeština</item>
+        <item>Ruština</item>
+    </string-array>
+    <string name="textfortest">Test v češtině</string>
+    <string name="label_main_page">Hlavní</string>
+    <string name="new_post">Nový post</string>
+    <string name="write_post_button">Napsat post</string>
+    <string name="text_of_post">Text pro post</string>
+    <string name="required_text">Musíte napsat text 6-256 symbolů</string>
+    <string name="title_of_post">Nadpis</string>
+    <string name="max_size_for_title">Max. délka nadpisu - 64</string>
+</resources>

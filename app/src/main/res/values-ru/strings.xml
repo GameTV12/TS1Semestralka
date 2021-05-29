@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My select</string>
+    <string name="username">Никнейм</string>
+    <string name="password">Пароль</string>
+    <string name="login">Логин</string>
+    <string name="login_btn">Войти</string>
+    <string name="sign_up_btn">Зарегистрироваться</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="email">Email</string>
+    <string name="sign_up_title">Регистрация</string>
+    <string name="write_post">Написать пост</string>
+    <string name="logout_button">Выйти</string>
+    <string name="go_home">Главная</string>
+    <string name="change_language">Язык</string>
+    <string name="text_for_new_user">Создать новый аккаунт</string>
+    <string name="login_here">Уже зарегестрировались? Войдите!</string>
+    <string name="select_language">Поддерживаемые языки:</string>
+    <string name="your_language">Приложение поддерживает данный язык</string>
+    <string-array name="list_language">
+        <item>Английский</item>
+        <item>Чешский</item>
+        <item>Русский</item>
+    </string-array>
+    <string name="textfortest">Тестовый текст на руском</string>
+    <string name="label_main_page">Главная</string>
+    <string name="new_post">Новый пост</string>
+    <string name="write_post_button">Написать пост</string>
+    <string name="text_of_post">Текст поста</string>
+    <string name="required_text">Текст поста обязателен и должен быть 6-256 символов</string>
+    <string name="title_of_post">Заголовок поста</string>
+    <string name="max_size_for_title">Макс. длина заголовка  - 256</string>
+</resources>

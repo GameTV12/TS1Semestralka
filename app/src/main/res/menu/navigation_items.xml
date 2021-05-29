@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/goHome_Bottom"
+        android:icon="@drawable/ic_go_home_for_bottom"
+        android:title="@string/go_home"/>
+    <item android:id="@+id/writePost_Bottom"
+        android:icon="@drawable/ic_write_post_for_bottom"
+        android:title="@string/write_post"/>
+    <item android:id="@+id/changeLangId_Bottom"
+        android:icon="@drawable/ic_change_lang_for_bottom"
+        android:title="@string/change_language"/>
+    <item android:id="@+id/logOut_Bottom"
+        android:icon="@drawable/ic_logout_for_all"
+        android:title="@string/logout_button"/>
+
+</menu>
